@@ -1,0 +1,91 @@
+RewriteEngine On
+
+# Redirect Rules
+RewriteCond %{HTTP_HOST} ^harshivtravels\.gitdebug\.xyz$   
+RewriteRule (.*) http://harshivtravels.gitdebug.xyz/$1 [R=301,L]
+
+# REDIRECTION TO HTTPS
+RewriteCond %{REMOTE_ADDR} !^127\.0\.0\.1
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+RewriteCond %{SCRIPT_FILENAME} !-d
+RewriteCond %{SCRIPT_FILENAME} !-f
+RewriteRule (.*) /404/url_rewrite.php
+
+DirectoryIndex index.html index.php
+
+# secure htaccess file
+<Files .htaccess>
+order allow,deny
+deny from all
+</Files>
+
+<Files 403.shtml>
+order allow,deny
+allow from all
+</Files>
+
+<files php.ini>  
+order deny,allow  
+deny from all
+</files>
+
+#Enable browser caching for faster page loading
+<Files *.js>
+Header add "Cache-Control" "max-age=2592000"
+</Files>
+
+<Files *.jpg>
+Header add "Cache-Control" "max-age=2592000"
+</Files>
+
+<Files *.jpeg>
+Header add "Cache-Control" "max-age=2592000"
+</Files>
+
+<Files *.JPEG>
+Header add "Cache-Control" "max-age=2592000"
+</Files>
+
+<Files *.JPG>
+Header add "Cache-Control" "max-age=2592000"
+</Files>
+
+<Files *.png>
+Header add "Cache-Control" "max-age=2592000"
+</Files>
+
+<Files *.gif>
+Header add "Cache-Control" "max-age=2592000"
+</Files>
+
+<Files *.css>
+Header add "Cache-Control" "max-age=2592000"
+</Files>
+
+<Files *.ico>
+Header add "Cache-Control" "max-age=2592000"
+</Files>
+
+<Files *.swf>
+Header add "Cache-Control" "max-age=2592000"
+</Files>
+
+<Files *.mp4>
+Header add "Cache-Control" "max-age=2592000"
+</Files>
+
+<Files *.woff>
+Header add "Cache-Control" "max-age=2592000"
+</Files>
+
+<Files *.woff2>
+Header add "Cache-Control" "max-age=2592000"
+</Files>
+
+<Files *.html>
+Header add "Cache-Control" "max-age=2592000"
+</Files>
+
+Options All -Indexes

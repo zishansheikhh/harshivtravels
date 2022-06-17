@@ -1,0 +1,483 @@
+/********************************************************************************
+ * Custom font
+********************************************************************************/
+@font-face {
+    font-family: "Lato";
+    src: url("/fonts/Lato-Regular.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Lato";
+    src: url("/fonts/Lato-Bold.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Roboto";
+    src: url("/fonts/Roboto-Regular.ttf") format("opentype");
+}
+@font-face {
+    font-family: "Roboto";
+    src: url("/fonts/Roboto-Medium.ttf") format("opentype");
+}
+@font-face {
+    font-family: "Roboto";
+    src: url("/fonts/Roboto-Bold.ttf") format("opentype");
+}
+/********************************************************************************
+ * Body Overrides CSS
+********************************************************************************/
+html, body, h1, h2, h3, h4, h5, h6{
+    font-family: "Roboto", arial;
+}
+html, body, p, a, span {
+    font-family: "Lato", arial;
+}
+/********************************************************************************
+ * Navbar CSS
+********************************************************************************/
+.navbar-fixed, nav {
+    background-color: #fff;
+    height: 100px;
+}
+nav{
+    box-shadow:
+    0px 2.4px 2.7px -5px rgba(0, 0, 0, 0.022),
+    0px 6.1px 6.9px -5px rgba(0, 0, 0, 0.031),
+    0px 12.4px 14.2px -5px rgba(0, 0, 0, 0.039),
+    0px 25.6px 29.2px -5px rgba(0, 0, 0, 0.048),
+    0px 70px 80px -5px rgba(0, 0, 0, 0.07);  
+    -webkit-box-shadow:
+    0px 2.4px 2.7px -5px rgba(0, 0, 0, 0.022),
+    0px 6.1px 6.9px -5px rgba(0, 0, 0, 0.031),
+    0px 12.4px 14.2px -5px rgba(0, 0, 0, 0.039),
+    0px 25.6px 29.2px -5px rgba(0, 0, 0, 0.048),
+    0px 70px 80px -5px rgba(0, 0, 0, 0.07); 
+}
+nav .brand-logo img {
+    width: 100px;
+}
+nav ul:not(.browser-default) {
+    padding: 20px 0 0 0;
+}
+nav ul a {
+    color: #000;
+    font-size: 4rem;
+    transition: 0.5s;
+}
+nav ul a:hover {
+    color: #ac00ca;
+    background-color: transparent;
+    transition: 0.3s;
+}
+nav .svg-inline--fa {
+    color: black;
+    font-size: 50px;
+}
+nav .svg-inline--fa.fa-whatsapp {
+    color: rgb(44, 247, 81);
+}
+nav .svg-inline--fa.fa-instagram {
+    color: rgb(249, 40, 137);
+}
+nav .sidenav-trigger {
+    padding: 0 4px;
+    margin: 0;
+}
+nav .sidenav-trigger i {
+    color: #000;
+    font-size: 32px;
+}
+.sidenav {
+    width: 100%;
+    text-align: center;
+}
+.sidenav-trigger {
+    display: block;
+	transition: 0.5s;
+}
+.sidenav-trigger:hover {
+	transform: rotate(90deg);
+	transition: 0.5s;
+}
+.sidenav li>a>i.material-icons {
+    margin: 0;
+    float: none;
+    transition: 0.5s;
+}
+.sidenav li>a>i.material-icons:hover {
+    transform: rotate(90deg);
+	transition: 0.5s;
+}
+.sidenav-wrapper {
+    width: 80%;
+    margin: auto;
+    padding: 60px 40px;
+}
+/* media query */
+@media (min-width: 999px) {
+    nav ul a {
+        color: #000;
+        font-size: 1.2rem;
+    }
+    nav .brand-logo img {
+        width: 100px;
+        margin-left: 40px;
+    }
+    nav .svg-inline--fa {
+        font-size: 30px;
+    }
+}
+/********************************************************************************
+ * Homepage CSS
+********************************************************************************/
+.default-header {
+    margin-bottom: 24px;
+}
+.default-header h3{
+    font-size: 2.2rem;
+    text-align: center;
+}
+.header-underline {
+    border-bottom: 2px solid;
+    width: 80%;
+    border-color: rgb(241,6,6); 
+    margin: auto;
+}
+.travel-search-icons {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.travel-search-icons .svg-inline--fa {
+    font-size: 25px;
+    background-color: #000;
+    color: #fff;
+    border-radius: 50%;
+    border: none;
+    padding: 15px;
+}
+.travel-search {
+    margin-top: 40px;
+    width: 100%;
+}
+form.travel-search-form label, form.contact-form label {
+    font-size: 14px;
+    color: #000;
+    padding: 5px;
+}
+form.travel-search-form input:not([type]), 
+form.travel-search-form input[type=text]:not(.browser-default), 
+form.travel-search-form input[type=password]:not(.browser-default), 
+form.travel-search-form input[type=email]:not(.browser-default), 
+form.travel-search-form input[type=url]:not(.browser-default), 
+form.travel-search-form input[type=time]:not(.browser-default), 
+form.travel-search-form input[type=date]:not(.browser-default), 
+form.travel-search-form input[type=datetime]:not(.browser-default), 
+form.travel-search-form input[type=datetime-local]:not(.browser-default), 
+form.travel-search-form input[type=tel]:not(.browser-default), 
+form.travel-search-form input[type=number]:not(.browser-default), 
+form.travel-search-form input[type=search]:not(.browser-default), 
+form.travel-search-form textarea.materialize-textarea {
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 22px;
+    box-shadow:
+    2.8px 2.8px 2px rgba(0, 0, 0, 0.02),
+    6.7px 6.7px 2px rgba(0, 0, 0, 0.028),
+    12.5px 12.5px 5px rgba(0, 0, 0, 0.035),
+    22.3px 22.3px 10px rgba(0, 0, 0, 0.042),
+    41.8px 41.8px 20px rgba(0, 0, 0, 0.05),
+    100px 100px 60px rgba(0, 0, 0, 0.07);
+}
+form.travel-search-form input:focus {
+    padding-left: 4px;
+    border-bottom: #000;
+    box-shadow: none;
+}
+form.travel-search-form button {
+    margin-top: 10px;
+}
+.submit-btn {
+    border: none;
+    border-radius: 24px;
+    padding: 14px;
+    width: 100%;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 500;
+    background: rgb(241,6,6);
+    background: -moz-linear-gradient(90deg, rgba(241,6,6,1) 0%, rgba(244,8,80,1) 46%, rgba(255,0,121,1) 63%);
+    background: -webkit-linear-gradient(90deg, rgba(241,6,6,1) 0%, rgba(244,8,80,1) 46%, rgba(255,0,121,1) 63%);
+    background: linear-gradient(90deg, rgba(241,6,6,1) 0%, rgba(244,8,80,1) 46%, rgba(255,0,121,1) 63%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f10606",endColorstr="#ff0079",GradientType=1);
+    box-shadow:
+    1.7px 1.4px 2.2px rgba(0, 0, 0, 0.017),
+    4px 3.3px 5.3px rgba(0, 0, 0, 0.024),
+    7.5px 6.3px 10px rgba(0, 0, 0, 0.03),
+    13.4px 11.2px 17.9px rgba(0, 0, 0, 0.036),
+    25.1px 20.9px 33.4px rgba(0, 0, 0, 0.043),
+    60px 50px 80px rgba(0, 0, 0, 0.06);
+}
+.contact-us {
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+.contact-form {
+    border-radius: 24px;
+    padding: 40px 15px;
+    background-color: #fff;
+    border: 1px solid #4e4e4e;
+    width: 98%;
+}
+form.contact-form input:not([type]), 
+form.contact-form input[type=text]:not(.browser-default), 
+form.contact-form input[type=password]:not(.browser-default), 
+form.contact-form input[type=email]:not(.browser-default), 
+form.contact-form input[type=url]:not(.browser-default), 
+form.contact-form input[type=time]:not(.browser-default), 
+form.contact-form input[type=date]:not(.browser-default), 
+form.contact-form input[type=datetime]:not(.browser-default), 
+form.contact-form input[type=datetime-local]:not(.browser-default), 
+form.contact-form input[type=tel]:not(.browser-default), 
+form.contact-form input[type=number]:not(.browser-default), 
+form.contact-form input[type=search]:not(.browser-default), 
+form.contact-form textarea.materialize-textarea {
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 22px;
+    transition: 0.4s;
+}
+input[type=text]:not(.browser-default):focus:not([readonly]),
+input[type=email]:not(.browser-default):focus:not([readonly]),
+input[type=tel]:not(.browser-default):focus:not([readonly]) {
+    border-bottom: 1px solid;
+    box-shadow: none;
+    padding-left: 8px;
+    transition: 0.4s;
+}
+.usp-icons {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    position: relative;
+    text-align: center;
+}
+.usp-icons .svg-inline--fa {
+    font-size: 60px;
+}
+.usp-icons p {
+    font-size: 18px;
+    font-weight: 600;
+}
+.booking-vehicle .card {
+    border-radius: 24px;
+    margin-bottom: 40px;
+    width: 98%;
+    box-shadow:
+    1.7px 1.4px 2.2px rgba(0, 0, 0, 0.017),
+    4px 3.3px 5.3px rgba(0, 0, 0, 0.024),
+    7.5px 6.3px 10px rgba(0, 0, 0, 0.03),
+    13.4px 11.2px 17.9px rgba(0, 0, 0, 0.036),
+    25.1px 20.9px 33.4px rgba(0, 0, 0, 0.043),
+    60px 50px 80px rgba(0, 0, 0, 0.06);
+    transition: 0.5s;
+}
+.booking-vehicle .card:hover {
+    box-shadow:
+    1.7px 1.4px 2.2px rgba(0, 0, 0, 0.037),
+    4px 3.3px 5.3px rgba(0, 0, 0, 0.044),
+    7.5px 6.3px 10px rgba(0, 0, 0, 0.05),
+    13.4px 11.2px 17.9px rgba(0, 0, 0, 0.066),
+    25.1px 20.9px 33.4px rgba(0, 0, 0, 0.063),
+    60px 50px 80px rgba(0, 0, 0, 0.07);
+    transition: 0.3s;
+}
+@media (min-width: 999px) {
+    .booking-vehicle .card .card-image{
+        height: 200px;
+    }
+}
+.booking-vehicle .card-content {
+    padding: 8px 6px;
+    text-align: center;
+    height: 130px;
+}
+.booking-vehicle .card-content .card-icons {
+    display: flex; 
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-around;
+    align-items: center;
+    height: 50px;
+    margin-bottom: 20px;
+}
+.card-content .card-icons img {
+    width: 32px;
+}
+/* owl carousel */
+.user-testimonials .card {
+    border-radius: 24px;
+    margin-bottom: 40px;
+    background-color: #000;
+    box-shadow:
+    1.7px 1.4px 2.2px rgba(0, 0, 0, 0.017),
+    4px 3.3px 5.3px rgba(0, 0, 0, 0.024),
+    7.5px 6.3px 10px rgba(0, 0, 0, 0.03),
+    13.4px 11.2px 17.9px rgba(0, 0, 0, 0.036),
+    25.1px 20.9px 33.4px rgba(0, 0, 0, 0.043),
+    60px 50px 80px rgba(0, 0, 0, 0.06);
+    padding: 5px;
+}
+.owl-wrapper {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 24px;
+    background-color: #000;
+    padding: 10px;
+    text-align: center;
+}
+.owl-slider {
+	width: 100%;
+	overflow-x: hidden;
+	position: absolute;
+	top: 0;
+    left: 0;
+}
+.owl-slider .owl-stage {
+    display: flex;
+}
+.owl-slider .slide img {
+    width: 80px;
+    border-radius: 50%;
+    margin-top: 10px;
+}
+.owl-slider .disabled {
+    display: none;
+}
+.owl-slide {
+    height: 300px;
+}
+.owl-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.owl-text span {
+    color: #fff;
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 100;
+    margin-top: 20px;
+    }
+.owl-text button {
+    background-color: transparent;
+    border: 3px solid #afb1b4;
+    border-radius: 6px;
+    font-size: 30px;
+    padding: 6px 48px;
+    cursor: pointer;
+    margin-top: 88px;
+    color: #e4e4e4;
+}
+.owl-text button:hover {
+color: #fff;
+border: 3px solid #fff;
+}
+.owl-dots {
+    text-align: center;
+    position: absolute;
+    bottom: 25px;
+    width: 100%;
+    left: 2px;
+}
+.owl-dots .owl-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin: 0 6px;
+    padding: 0;
+    cursor: pointer;
+    border-color: transparent;
+    background-color: #fff;
+}
+.owl-dots .owl-dot.active {
+    background-color: #69728c;
+    outline: 0;
+}
+/* testimonial CSS */
+.carousel{
+    height: 600px; 
+    perspective: 250px;    
+    
+}
+.carousel .carousel-item {
+	width: 450px;
+	background: #fff;
+	padding: 50px;
+	height: auto;
+	text-align: center;
+    border-radius: 15px;
+}
+.img-area {
+	width: 100px;
+	height: 100px;
+	margin: 0 auto;
+	overflow: hidden;
+	border-radius: 50%;
+	border: inset 8px deepskyblue;
+}
+        .img-area img{
+            width: 100%;
+        }
+        .testi p {
+	color: #262626;
+	font-size: 18px;
+	line-height: 1.9;
+}
+        .testi h4 {
+	font-size: 20px;
+	margin: 0;
+	color: #000;
+}
+        .testi h5 {
+	font-size: 14px;
+	letter-spacing: 5px;
+	margin: 7px 0;
+}
+
+/* media query */
+.card .card-image {
+    position: relative;
+    height: 200px;
+}
+footer {
+    text-align: center;
+}
+footer a {
+    color: #000;
+    transition: 0.5s;
+}
+footer a:hover {
+    color: #ac00ca;
+    transition: 0.3s;
+}
+footer h3 {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    padding: 8px 0;
+    margin: 0;
+}
+footer h3 small {
+    color: #4e4e4e;
+    font-size: 1rem;
+    letter-spacing: 2px;
+}
+img.footer-logo {
+    width: 100px;
+}
+footer .svg-inline--fa {
+    font-size: 32px;
+    padding: 0 8px;
+}
+.footer-copyright a {
+    color: #ac00ca;
+}
