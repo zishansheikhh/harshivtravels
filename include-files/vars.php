@@ -5,7 +5,7 @@
     //  domain host e.g. www.xyz.com | do NOT put trailing "/"
     define('_HOST_DOMAIN_PROD', 'harshivtravels.gitdebug.xyz');
     define('_HOST_DOMAIN_STAGING', 'harshivtravels.gitdebug.xyz');
-    define('_HOST_DOMAIN_DEV', 'harshivtravels.gitdebug.xyz');
+    define('_HOST_DOMAIN_DEV', 'zishansheikhh.github.io/harshivtravels');
     define('_HOST_DOMAIN_LOCAL', 'harshiv');
 
     /********************PRODUCTION ENVIRONMENT*****************************/

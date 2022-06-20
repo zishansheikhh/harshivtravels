@@ -1,8 +1,8 @@
 RewriteEngine On
 
 # Redirect Rules
-RewriteCond %{HTTP_HOST} ^harshivtravels\.gitdebug\.xyz$   
-RewriteRule (.*) http://harshivtravels.gitdebug.xyz/$1 [R=301,L]
+RewriteCond %{HTTP_HOST} ^zishansheikhh.github.io/harshivtravels\.xyz$    
+RewriteRule (.*) https://zishansheikhh.github.io/harshivtravels/$1 [R=301,L]
 
 # REDIRECTION TO HTTPS
 RewriteCond %{REMOTE_ADDR} !^127\.0\.0\.1
