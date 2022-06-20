@@ -13,7 +13,6 @@
     <TITLE><?=$PageTitle.' | '._WebsiteName?></TITLE>
     <META name="description" content="description of the webpage" />
     <LINK rel="canonical" href="<?=_HOST?>/"> <!-- Define Canonical !-->
-
     <?php include_once("include-files/common-css.php"); ?>
     <?php include_once("include-files/common-js.php"); ?>
 
