@@ -147,7 +147,7 @@ nav .sidenav-trigger i {
     text-align: center;
 }
 .travel-search-icons .svg-inline--fa {
-    font-size: 25px;
+    font-size: 20px;
     background-color: #000;
     color: #fff;
     border-radius: 50%;
@@ -157,6 +157,18 @@ nav .sidenav-trigger i {
 .travel-search {
     margin-top: 40px;
     width: 100%;
+}
+.travel-search-icons .tabs{
+    height: 90px;
+}
+.travel-search-icons .tabs .tab {
+    line-height: 25px;
+    height: 90px;
+}
+.travel-search-icons .tabs .tab span {
+    display: block;
+    color: #000;
+    font-size: 12px;
 }
 form.travel-search-form label, form.contact-form label {
     font-size: 14px;
@@ -179,7 +191,7 @@ form.travel-search-form textarea.materialize-textarea {
     background-color: #fff;
     border: 1px solid #000;
     border-radius: 22px;
-    padding-left: 8px !important;
+    padding-left: 8px;
     box-shadow:
     2.8px 2.8px 2px rgba(0, 0, 0, 0.02),
     6.7px 6.7px 2px rgba(0, 0, 0, 0.028),
@@ -244,14 +256,13 @@ form.contact-form textarea.materialize-textarea {
     border: 1px solid #000;
     border-radius: 22px;
     transition: 0.4s;
-    padding-left: 8px !important;
+    padding-left: 8px;
 }
 input[type=text]:not(.browser-default):focus:not([readonly]),
 input[type=email]:not(.browser-default):focus:not([readonly]),
 input[type=tel]:not(.browser-default):focus:not([readonly]) {
     border-bottom: 1px solid;
     box-shadow: none;
-    padding-left: 8px;
     transition: 0.4s;
 }
 .usp-icons {
