@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="theme-color" content="#780074" />
+    <meta name="theme-color" content="#ffffff" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <META http-equiv="content-type" content="text/html; charset=utf-8">
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
@@ -11,7 +11,6 @@
     <META name="description" content="description of the webpage" />
     <LINK rel="canonical" href="harshivtravels.com"> <!-- Define Canonical !-->
     <link rel="shortcut icon" href="/favicon.ico">
-
     <link href="css/materialize.min.css" rel="stylesheet" type="text/css" />
     <link href="css/styles.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -30,11 +29,39 @@
     <script type="text/javascript">
     $(document).ready(function()
     {
+        $('.datepicker').datepicker();
         $('.sidenav').sidenav();
 
         $(".dropdown-trigger").dropdown({
             coverTrigger: false,
             hover: true,
+        });
+
+        // tabs
+        setTimeout(() => {
+              $('.popup').show();
+          }, 1000);
+
+          $('.popup-close').on('click',function(){
+            $('.popup').hide();
+          })
+        //   tabs
+        $('ul.tabs').tabs();
+
+        $('.about-us-tab').on('click', function(){
+            var instance = M.Tabs.getInstance($('ul.tabs'));
+            var tabId = $(this).attr('href');
+            tabId = tabId.substr(1);
+            instance.select(tabId);
+        });
+        $('input.autocomplete').autocomplete({
+            data: {
+                "Surat": null,
+                "Ahemdabad": null,
+                "Delhi": null,
+                "Jaipur": null,
+                "Ajmer": null,
+            },
         });
             /*-----------------------------
         Sidebar menu item click event
@@ -145,43 +172,109 @@
             <li><a href="#!" class="sidenav-close"><i class="material-icons">close</i></a></li>
         </div>
     </ul>
+    <!-- header ends -->
     <!-- body -->
     
     <div class="container">
+        <!-- city search section -->
         <section class="travel-search-icons">
-            <div class="row">
-                <div class="col s3">
-                    <a href=""><i class="fa-solid fa-route"></i></a>
-                    <p>One Way</p>
-                </div>
-                <div class="col s3">
-                    <a href=""><i class="fa-solid fa-circle-notch"></i></a>
-                    <p>Round Trip</p>
-                </div>
-                <div class="col s3">
-                    <a href=""><i class="fa-solid fa-street-view"></i></a>
-                    <p>Local</p>
-                </div>
-                <div class="col s3">
-                    <a href=""><i class="fa-solid fa-truck-fast"></i></a>
-                    <p>Transfer</p>
-                </div>
+            <ul id="tabs-swipe-demo" class="tabs">
+                <li class="tab col s3"><a class="active mm-tab" href="#SINGLETRIP"><i class="fa-solid fa-route"></i>
+                    <span>One Way</span></a>
+                </li>
+                <li class="tab col s3"><a class="mm-tab" href="#ROUNDTRIP"><i class="fa-solid fa-circle-notch"></i>
+                    <span>Round Trip</span></a>
+                </li>
+                <li class="tab col s3"><a class="mm-tab" href="#LOCAL"><i class="fa-solid fa-street-view"></i>
+                    <span>Local</span></a>
+                </li>
+                <li class="tab col s3"><a class="mm-tab" href="#TRANSFER"><i class="fa-solid fa-truck-fast"></i>
+                    <span>Transfer</span></a>
+                </li>
+            </ul>
+
+            <div class="col s12 trip-tabs-content" id="SINGLETRIP">
+                <section class="travel-search">
+                    <form class="travel-search-form">
+                        <section>
+                            <label for="autocomplete-input">Pick-up City Name</label>
+                            <input type="text" id="autocomplete-input" class="autocomplete">
+                        </section>
+                        <section>
+                            <label>Drop-off City Name</label>
+                            <input type="text" id="autocomplete-input" class="autocomplete">
+                        </section>
+                        <section>
+                            <label>Choose a date</label>
+                            <input type="text" class="datepicker">
+                        </section>
+                        <button class="submit-btn">Submit</button>
+                    </form>
+                </section>
+            </div>
+
+            <div class="col s12 trip-tabs-content" id="ROUNDTRIP">
+                <section class="travel-search">
+                    <form class="travel-search-form">
+                        <section>
+                            <label for="autocomplete-input">Pick-up City Name</label>
+                            <input type="text" id="autocomplete-input" class="autocomplete">
+                        </section>
+                        <section>
+                            <label>Drop-off City Name</label>
+                            <input type="text">
+                        </section>
+                        <section>
+                            <label>Choose a date</label>
+                            <input type="text" class="datepicker">
+                        </section>
+                        <button class="submit-btn">Submit</button>
+                    </form>
+                </section>
+            </div>
+
+            <div class="col s12 trip-tabs-content" id="LOCAL">
+                <section class="travel-search">
+                    <form class="travel-search-form">
+                        <section>
+                            <label for="autocomplete-input">Pick-up City Name</label>
+                            <input type="text" id="autocomplete-input" class="autocomplete">
+                        </section>
+                        <section>
+                            <label>Drop-off City Name</label>
+                            <input type="text">
+                        </section>
+                        <section>
+                            <label>Choose a date</label>
+                            <input type="text" class="datepicker">
+                        </section>
+                        <button class="submit-btn">Submit</button>
+                    </form>
+                </section>
+            </div>
+
+            <div class="col s12 trip-tabs-content" id="TRANSFER">
+                <section class="travel-search">
+                    <form class="travel-search-form">
+                        <section>
+                            <label for="autocomplete-input">Pick-up City Name</label>
+                            <input type="text" id="autocomplete-input" class="autocomplete">
+                        </section>
+                        <section>
+                            <label>Drop-off City Name</label>
+                            <input type="text">
+                        </section>
+                        <section>
+                            <label>Choose a date</label>
+                            <input type="text" class="datepicker">
+                        </section>
+                        <button class="submit-btn">Submit</button>
+                    </form>
+                </section>
             </div>
         </section>
 
-        <section class="travel-search">
-            <form class="travel-search-form">
-                <section>
-                    <label for="autocomplete-input">Pick-up City Name</label>
-                    <input type="text" id="autocomplete-input" class="autocomplete">
-                </section>
-                <section>
-                    <label>Drop-off City Name</label>
-                    <input type="text">
-                </section>
-                <button class="submit-btn">Submit<i class="fa-solid fa-angles-right"></i></button>
-            </form>
-        </section>
+        <!-- city search section ends -->
 
         <section class="contact-us">
             <form class="contact-form" action="/ajax/send-enquiry/" id="sendContactUs">
@@ -276,7 +369,7 @@
                                 <img src="images/ico/stick.svg">
                                 <img src="images/ico/gas-pump.svg">
                             </div>
-                            <a href="#!" class="submit-btn">Book Now</a>
+                            <a href="/" class="submit-btn">Book Now</a>
                         </div>
                     </div>
                 </div>
@@ -292,7 +385,7 @@
                                 <img src="images/ico/stick.svg">
                                 <img src="images/ico/gas-pump.svg">
                             </div>
-                            <a href="#!" class="submit-btn">Book Now</a>
+                            <a href="/" class="submit-btn">Book Now</a>
                         </div>
                     </div>
                 </div>
