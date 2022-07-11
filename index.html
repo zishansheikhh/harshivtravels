@@ -30,32 +30,54 @@
     <script type="text/javascript">
     $(document).ready(function()
     {
-        $('.datepicker').datepicker();
-        $('.sidenav').sidenav();
-
+        $('.sidenav').sidenav(); //sidenav
+        $('.datepicker').datepicker(); //datepicker
+        // dropdown
         $(".dropdown-trigger").dropdown({
             coverTrigger: false,
             hover: true,
         });
-
-        // tabs
-        setTimeout(() => {
-              $('.popup').show();
-          }, 1000);
-
-          $('.popup-close').on('click',function(){
-            $('.popup').hide();
-          })
         //   tabs
         $('ul.tabs').tabs();
+        // autocomplete
+        $('#autocomplete-input').autocomplete({
+            data: {
+                "Surat": null,
+                "Ahemdabad": null,
+                "Vadodara": null,
+                "Rajkot": null,
+                "Delhi": null,
+                "Vasai":null,
+                "Virar":null,
+                "Daman":null,
+                "Gurgaon":null,
+                "Mumbai":null,
+                "Noida":null,
+                "Nashik":null,
+                "Pune":null,
+                "Nagpur":null,
+                "Aurangabad":null,
+                "Udaipur":null,
+                "Jaipur": null,
+                "Ajmer": null,
+            },
+        });
+        // carousel
+        $("#owl-demo").owlCarousel({
+            items: 1,
+            nav: false,
+            dots: true,
+            loop: true,
+            autoplay: true,
+            autoplayTimeout:5000,
+            responsive: {
+                0: {
+                items: 1
+                }
+            }
+        });
 
-        // $('.about-us-tab').on('click', function(){
-        //     var instance = M.Tabs.getInstance($('ul.tabs'));
-        //     var tabId = $(this).attr('href');
-        //     tabId = tabId.substr(1);
-        //     instance.select(tabId);
-        // });
-            /*-----------------------------
+        /*-----------------------------
         Sidebar menu item click event
         -----------------------------*/
         if($(".sidenav").length > 0)
@@ -114,44 +136,6 @@
                 }
             });
         }
-        // autocomplete
-        $('input.autocomplete').autocomplete({
-            data: {
-                "Surat": null,
-                "Ahemdabad": null,
-                "Vadodara": null,
-                "Rajkot": null,
-                "Delhi": null,
-                "Vasai":null,
-                "Virar":null,
-                "Daman":null,
-                "Gurgaon":null,
-                "Mumbai":null,
-                "Noida":null,
-                "Nashik":null,
-                "Pune":null,
-                "Nagpur":null,
-                "Aurangabad":null,
-                "Udaipur":null,
-                "Jaipur": null,
-                "Ajmer": null,
-            },
-        });
-
-        // carousel
-        $("#owl-demo").owlCarousel({
-            items: 1,
-            nav: false,
-            dots: true,
-            loop: true,
-            autoplay: true,
-            autoplayTimeout:5000,
-            responsive: {
-                0: {
-                items: 1
-                }
-            }
-        });
     });
     </script>
 </head>
@@ -162,17 +146,17 @@
     <div class="navbar-fixed">
         <nav>
             <div class="nav-wrapper">
-                <a href="/" class="brand-logo left"><img src="images/harshiv-travels-logo.svg"></a>
+                <a href="index.html" class="brand-logo left"><img src="images/harshiv-travels-logo.svg"></a>
                 <ul class="right">
                     <li><a href="https://wa.me/+918980541812"><i class="fa-brands fa-whatsapp"></i></a></li>
-                    <li><a href="/"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="https://www.instagram/com"><i class="fa-brands fa-instagram"></i></a></li>
                     <a data-target="mobile-menu" class="sidenav-trigger hide-on-large-only right">
                     <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
                 </ul>
                 <ul class="right hide-on-med-and-down">
-                    <li><a href="sass.html">Home</a></li>
-                    <li><a href="badges.html">About Us</a></li>
-                    <li><a href="collapsible.html">Contact Us</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#About">About Us</a></li>
+                    <li><a href="#Contact">Contact Us</a></li>
                 </ul>
             </div>
         </nav>

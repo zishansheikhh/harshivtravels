@@ -1,3 +1,4 @@
+
 function SendNewsletterSubscription(t)
 {
     $(t).addClass('spinner');
