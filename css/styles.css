@@ -3,23 +3,23 @@
 ********************************************************************************/
 @font-face {
     font-family: "Lato";
-    src: url("/fonts/Lato-Regular.ttf") format("truetype");
+    src: url("../fonts/Lato-Regular.ttf") format("truetype");
 }
 @font-face {
     font-family: "Lato";
-    src: url("/fonts/Lato-Bold.ttf") format("truetype");
+    src: url("../fonts/Lato-Bold.ttf") format("truetype");
 }
 @font-face {
     font-family: "Roboto";
-    src: url("/fonts/Roboto-Regular.ttf") format("opentype");
+    src: url("../fonts/Roboto-Regular.ttf") format("opentype");
 }
 @font-face {
     font-family: "Roboto";
-    src: url("/fonts/Roboto-Medium.ttf") format("opentype");
+    src: url("../fonts/Roboto-Medium.ttf") format("opentype");
 }
 @font-face {
     font-family: "Roboto";
-    src: url("/fonts/Roboto-Bold.ttf") format("opentype");
+    src: url("../fonts/Roboto-Bold.ttf") format("opentype");
 }
 /********************************************************************************
  * Body Overrides CSS
@@ -199,6 +199,7 @@ form.travel-search-form textarea.materialize-textarea {
     22.3px 22.3px 10px rgba(0, 0, 0, 0.042),
     41.8px 41.8px 20px rgba(0, 0, 0, 0.05),
     100px 100px 60px rgba(0, 0, 0, 0.07);
+    width: 97%;
 }
 form.travel-search-form input:focus {
     border-bottom: #000;
@@ -257,6 +258,7 @@ form.contact-form textarea.materialize-textarea {
     border-radius: 22px;
     transition: 0.4s;
     padding-left: 8px;
+    width: 97%;
 }
 input[type=text]:not(.browser-default):focus:not([readonly]),
 input[type=email]:not(.browser-default):focus:not([readonly]),
@@ -264,6 +266,7 @@ input[type=tel]:not(.browser-default):focus:not([readonly]) {
     border-bottom: 1px solid;
     box-shadow: none;
     transition: 0.4s;
+    /* padding-left: 8px; */
 }
 .usp-icons {
     margin-top: 40px;

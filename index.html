@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="theme-color" content="#ffffff" />
+    <meta name="theme-color" content="#fff" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <META http-equiv="content-type" content="text/html; charset=utf-8">
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <META name="robots" content="index,follow" />
     <TITLE>Homepage | Harshiv Travels</TITLE>
-    <META name="description" content="description of the webpage" />
+    <META name="description" content="Book cars, SUVs, KUVs from anywhere to everywhere" />
     <LINK rel="canonical" href="harshivtravels.com"> <!-- Define Canonical !-->
-    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="shortcut icon" href="favicon.ico">
+    <!-- CSS -->
     <link href="css/materialize.min.css" rel="stylesheet" type="text/css" />
     <link href="css/styles.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -20,11 +21,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,500;0,700;0,800;1,300&display=swap" rel="stylesheet">
-    
+    <!-- JS -->
     <script src="js/jquery.min.js"></script>
     <script src="js/materialize.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js" integrity="sha512-6PM0qYu5KExuNcKt5bURAoT6KCThUmHRewN3zUFNaoI6Di7XJPTMoT6K0nsagZKk2OB4L7E3q1uQKHNHd4stIQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="js/owl.carousel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js" integrity="sha512-6PM0qYu5KExuNcKt5bURAoT6KCThUmHRewN3zUFNaoI6Di7XJPTMoT6K0nsagZKk2OB4L7E3q1uQKHNHd4stIQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <script type="text/javascript">
     $(document).ready(function()
@@ -48,21 +49,12 @@
         //   tabs
         $('ul.tabs').tabs();
 
-        $('.about-us-tab').on('click', function(){
-            var instance = M.Tabs.getInstance($('ul.tabs'));
-            var tabId = $(this).attr('href');
-            tabId = tabId.substr(1);
-            instance.select(tabId);
-        });
-        $('input.autocomplete').autocomplete({
-            data: {
-                "Surat": null,
-                "Ahemdabad": null,
-                "Delhi": null,
-                "Jaipur": null,
-                "Ajmer": null,
-            },
-        });
+        // $('.about-us-tab').on('click', function(){
+        //     var instance = M.Tabs.getInstance($('ul.tabs'));
+        //     var tabId = $(this).attr('href');
+        //     tabId = tabId.substr(1);
+        //     instance.select(tabId);
+        // });
             /*-----------------------------
         Sidebar menu item click event
         -----------------------------*/
@@ -122,9 +114,32 @@
                 }
             });
         }
+        // autocomplete
+        $('input.autocomplete').autocomplete({
+            data: {
+                "Surat": null,
+                "Ahemdabad": null,
+                "Vadodara": null,
+                "Rajkot": null,
+                "Delhi": null,
+                "Vasai":null,
+                "Virar":null,
+                "Daman":null,
+                "Gurgaon":null,
+                "Mumbai":null,
+                "Noida":null,
+                "Nashik":null,
+                "Pune":null,
+                "Nagpur":null,
+                "Aurangabad":null,
+                "Udaipur":null,
+                "Jaipur": null,
+                "Ajmer": null,
+            },
+        });
 
         // carousel
-        $("#owl-slider").owlCarousel({
+        $("#owl-demo").owlCarousel({
             items: 1,
             nav: false,
             dots: true,
@@ -195,13 +210,13 @@
 
             <div class="col s12 trip-tabs-content" id="SINGLETRIP">
                 <section class="travel-search">
-                    <form class="travel-search-form">
+                    <form action="#" class="travel-search-form">
                         <section>
-                            <label for="autocomplete-input">Pick-up City Name</label>
+                            <label for="autocomplete">Pick-up City Name</label>
                             <input type="text" id="autocomplete-input" class="autocomplete">
                         </section>
                         <section>
-                            <label>Drop-off City Name</label>
+                            <label  for="autocomplete-input">Drop-off City Name</label>
                             <input type="text" id="autocomplete-input" class="autocomplete">
                         </section>
                         <section>
@@ -241,7 +256,7 @@
                             <input type="text" id="autocomplete-input" class="autocomplete">
                         </section>
                         <section>
-                            <label>Drop-off City Name</label>
+                            <label for="autocomplete-input">Drop-off City Name</label>
                             <input type="text">
                         </section>
                         <section>
@@ -337,7 +352,7 @@
                                 <img src="images/ico/stick.svg">
                                 <img src="images/ico/gas-pump.svg">
                             </div>
-                            <a href="/" class="submit-btn">Book Now</a>
+                            <a href="https://wa.me/+917566699108" class="submit-btn">Book Now</a>
                         </div>
                     </div>
                 </div>
@@ -353,7 +368,7 @@
                                 <img src="images/ico/stick.svg">
                                 <img src="images/ico/gas-pump.svg">
                             </div>
-                            <a href="/" class="submit-btn">Book Now</a>
+                            <a href="https://wa.me/+917566699108" class="submit-btn">Book Now</a>
                         </div>
                     </div>
                 </div>
@@ -369,7 +384,7 @@
                                 <img src="images/ico/stick.svg">
                                 <img src="images/ico/gas-pump.svg">
                             </div>
-                            <a href="/" class="submit-btn">Book Now</a>
+                            <a href="https://wa.me/+917566699108" class="submit-btn">Book Now</a>
                         </div>
                     </div>
                 </div>
@@ -385,7 +400,7 @@
                                 <img src="images/ico/stick.svg">
                                 <img src="images/ico/gas-pump.svg">
                             </div>
-                            <a href="/" class="submit-btn">Book Now</a>
+                            <a href="https://wa.me/+917566699108" class="submit-btn">Book Now</a>
                         </div>
                     </div>
                 </div>
@@ -400,7 +415,7 @@
             <!-- Owl Carousal -->
             <div class="card">
             <div class="owl-wrapper">
-            <div class="owl-slider" id="owl-slider">
+            <div class="owl-slider" id="owl-demo">
                 <!-- slide 01 -->
                 <div class="slide">
                     <div class="owl-slide">
