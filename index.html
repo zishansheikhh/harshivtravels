@@ -174,11 +174,11 @@
                     <form autocomplete="off" action="#" class="travel-search-form">
                         <p>One Way Trip</p>
                         <section class="autocomplete">
-                            <label for="autocomplete">Pick-up City Name</label>
+                            <label>Pick-up City Name</label>
                             <input type="text" id="myInput" class="autocomplete">
                         </section>
                         <section class="autocomplete">
-                            <label  for="autocomplete-input">Drop-off City Name</label>
+                            <label>Drop-off City Name</label>
                             <input type="text" id="myInput" class="autocomplete">
                         </section>
                         <section>
@@ -195,7 +195,7 @@
                     <form autocomplete="off" class="travel-search-form">
                         <p>Round Trip</p>
                         <section>
-                            <label for="autocomplete-input">Pick-up City Name</label>
+                            <label>Pick-up City Name</label>
                             <input type="text" id="myInput" class="autocomplete">
                         </section>
                         <section>
@@ -216,11 +216,11 @@
                     <form autocomplete="off" class="travel-search-form">
                         <p>Local</p>
                         <section>
-                            <label for="autocomplete-input">Pick-up City Name</label>
+                            <label>Pick-up City Name</label>
                             <input type="text" id="myInput" class="autocomplete">
                         </section>
                         <section>
-                            <label for="autocomplete-input">Drop-off City Name</label>
+                            <label>Drop-off City Name</label>
                             <input type="text">
                         </section>
                         <section>
@@ -237,7 +237,7 @@
                     <form autocomplete="off" class="travel-search-form">
                         <p>Transfer</p>
                         <section>
-                            <label for="autocomplete-input">Pick-up City Name</label>
+                            <label>Pick-up City Name</label>
                             <input type="text" id="myInput" class="autocomplete">
                         </section>
                         <section>
@@ -549,8 +549,24 @@
     }
 
         /*An array containing all the country names in the world:*/
-        var countries = ["Ahemdabad", "Aurangabad", "Bhuj", "Daman", "Delhi", "Gurgaon", "Noida", "Pune", "Udaipur", "jaipur", "Nagpur", "Indore", "Ujjain", "Nasik", "Mumbai", "Surat", "Vadodara"];
-
+        var countries = ["Ahemdabad", 
+            "Aurangabad", 
+            "Bhuj", 
+            "Daman", 
+            "Delhi", 
+            "Gurgaon", 
+            "Noida", 
+            "Pune", 
+            "Udaipur", 
+            "jaipur", 
+            "Nagpur", 
+            "Indore", 
+            "Ujjain", 
+            "Nasik", 
+            "Mumbai", 
+            "Surat", 
+            "Vadodara"
+        ];
         /*initiate the autocomplete function on the "myInput" element, and pass along the countries array as possible autocomplete values:*/
         autocomplete(document.getElementById("myInput"), countries);
     </script>
