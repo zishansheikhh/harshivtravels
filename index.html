@@ -181,11 +181,11 @@
                         <p>One Way Trip</p>
                         <section class="autocomplete">
                             <label>Pick-up City Name</label>
-                            <input type="text" id="myInput">
+                            <input type="text" id="SinglePickupCity">
                         </section>
                         <section class="autocomplete">
                             <label>Drop-off City Name</label>
-                            <input type="text" id="myInput">
+                            <input type="text" id="SingleDropCity">
                         </section>
                         <section>
                             <label>Choose a date</label>
@@ -202,11 +202,11 @@
                         <p>Round Trip</p>
                         <section class="autocomplete">
                             <label>Pick-up City Name</label>
-                            <input type="text" id="myInput">
+                            <input type="text" id="RoundPickupCity">
                         </section>
                         <section class="autocomplete">
                             <label>Drop-off City Name</label>
-                            <input type="text" id="myInput">
+                            <input type="text" id="RroundDropCity">
                         </section>
                         <section>
                             <label>Choose a date</label>
@@ -223,11 +223,11 @@
                         <p>Local</p>
                         <section class="autocomplete">
                             <label>Pick-up City Name</label>
-                            <input type="text" id="myInput">
+                            <input type="text" id="LocalPickupCity">
                         </section>
                         <section class="autocomplete">
                             <label>Drop-off City Name</label>
-                            <input type="text" id="myInput">
+                            <input type="text" id="LocalDropCity">
                         </section>
                         <section>
                             <label>Choose a date</label>
@@ -244,11 +244,11 @@
                         <p>Transfer</p>
                         <section>
                             <label class="autocomplete">Pick-up City Name</label>
-                            <input type="text" id="myInput">
+                            <input type="text" id="TransferPickupCity">
                         </section>
                         <section class="autocomplete">
                             <label>Drop-off City Name</label>
-                            <input type="text" id="myInput">
+                            <input type="text" id="TransferDropCity">
                         </section>
                         <section>
                             <label>Choose a date</label>
@@ -575,7 +575,14 @@
             "Vadodara"
         ];
         /*initiate the autocomplete function on the "myInput" element, and pass along the countries array as possible autocomplete values:*/
-        autocomplete(document.getElementById("myInput"), cities);
+        autocomplete(document.getElementById("SinglePickupCity"), cities);
+        autocomplete(document.getElementById("RoundPickupCity"), cities);
+        autocomplete(document.getElementById("LocalPickupCity"), cities);
+        autocomplete(document.getElementById("TransferPickupCity"), cities);
+        autocomplete(document.getElementById("SingleDropCity"), cities);
+        autocomplete(document.getElementById("RroundDropCity"), cities);
+        autocomplete(document.getElementById("LocalDropCity"), cities);
+        autocomplete(document.getElementById("TransferDropCity"), cities);
     </script>
     
     </body>
