@@ -11,6 +11,7 @@
     <META name="description" content="Book cars, SUVs, KUVs from anywhere to everywhere" />
     <LINK rel="canonical" href="harshivtravels.com"> <!-- Define Canonical !-->
     <link rel="shortcut icon" href="favicon.ico">
+
     <!-- CSS -->
     <link href="css/materialize.min.css" rel="stylesheet" type="text/css" />
     <link href="css/styles.css" rel="stylesheet" type="text/css" />
@@ -21,6 +22,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,500;0,700;0,800;1,300&display=swap" rel="stylesheet">
+
     <!-- JS -->
     <script src="js/jquery.min.js"></script>
     <script src="js/materialize.min.js"></script>
@@ -31,14 +33,18 @@
     $(document).ready(function()
     {
         $('.sidenav').sidenav(); //sidenav
+
         $('.datepicker').datepicker(); //datepicker
+
         // dropdown
         $(".dropdown-trigger").dropdown({
             coverTrigger: false,
             hover: true,
         });
+        
         //   tabs
         $('ul.tabs').tabs();
+
         // carousel
         $("#owl-demo").owlCarousel({
             items: 1,
@@ -144,7 +150,7 @@
             <li><a href="/">Home</a></li>
             <li><a href="/">About Us</a></li>
             <li><a href="/">Contact Us</a></li>
-            <li><a href="#" class="submit-btn">Call Us now</a></li>
+            <li><a href="tel:+918980541812" class="submit-btn">Call Us now</a></li>
             <li><a href="#!" class="sidenav-close"><i class="material-icons">close</i></a></li>
         </div>
     </ul>
@@ -265,15 +271,15 @@
                 <input type="hidden" name="option" value="enquiry_form">
                 <section>
                     <label>Your Name*</label>
-                    <input class="form-control" type="text" maxlength="50" name="FullName">
+                    <input class="form-control" type="text" maxlength="80" name="FullName">
                 </section>
                 <section>
                     <label>E-mail*:</label>
-                    <input class="form-control" type="text" maxlength="50" name="Email">
+                    <input class="form-control" type="text" maxlength="60" name="Email">
                 </section>
                 <section>
                     <label>Phone*:</label>
-                    <input class="form-control" type="tel" maxlength="15" name="Phone">
+                    <input class="form-control" type="tel" maxlength="12" name="Phone">
                 </section>
                 <section>
                     <label>Query*</label>
@@ -548,8 +554,9 @@
     });
     }
 
-        /*An array containing all the country names in the world:*/
-        var countries = ["Ahemdabad", 
+        /*An array containing all the city names in India:*/
+        var countries = [
+            "Ahemdabad", 
             "Aurangabad", 
             "Bhuj", 
             "Daman", 
