@@ -40,28 +40,28 @@
         //   tabs
         $('ul.tabs').tabs();
         // autocomplete
-        $('#autocomplete-input').autocomplete({
-            data: {
-                "Surat": null,
-                "Ahemdabad": null,
-                "Vadodara": null,
-                "Rajkot": null,
-                "Delhi": null,
-                "Vasai":null,
-                "Virar":null,
-                "Daman":null,
-                "Gurgaon":null,
-                "Mumbai":null,
-                "Noida":null,
-                "Nashik":null,
-                "Pune":null,
-                "Nagpur":null,
-                "Aurangabad":null,
-                "Udaipur":null,
-                "Jaipur": null,
-                "Ajmer": null,
-            },
-        });
+        // $('#autocomplete-input').autocomplete({
+        //     data: {
+        //         "Surat": '',
+        //         "Ahemdabad": '',
+        //         "Vadodara": '',
+        //         "Rajkot": '',
+        //         "Delhi": '',
+        //         "Vasai":'',
+        //         "Virar":'',
+        //         "Daman":'',
+        //         "Gurgaon":'',
+        //         "Mumbai":'',
+        //         "Noida":null,
+        //         "Nashik":null,
+        //         "Pune":null,
+        //         "Nagpur":null,
+        //         "Aurangabad":null,
+        //         "Udaipur":null,
+        //         "Jaipur": null,
+        //         "Ajmer": null,
+        //     },
+        // });
         // carousel
         $("#owl-demo").owlCarousel({
             items: 1,
@@ -195,6 +195,7 @@
             <div class="col s12 trip-tabs-content" id="SINGLETRIP">
                 <section class="travel-search">
                     <form action="#" class="travel-search-form">
+                        <p>One Way Trip</p>
                         <section>
                             <label for="autocomplete">Pick-up City Name</label>
                             <input type="text" id="autocomplete-input" class="autocomplete">
@@ -215,6 +216,7 @@
             <div class="col s12 trip-tabs-content" id="ROUNDTRIP">
                 <section class="travel-search">
                     <form class="travel-search-form">
+                        <p>Round Trip</p>
                         <section>
                             <label for="autocomplete-input">Pick-up City Name</label>
                             <input type="text" id="autocomplete-input" class="autocomplete">
@@ -235,6 +237,7 @@
             <div class="col s12 trip-tabs-content" id="LOCAL">
                 <section class="travel-search">
                     <form class="travel-search-form">
+                        <p>Local</p>
                         <section>
                             <label for="autocomplete-input">Pick-up City Name</label>
                             <input type="text" id="autocomplete-input" class="autocomplete">
@@ -255,6 +258,7 @@
             <div class="col s12 trip-tabs-content" id="TRANSFER">
                 <section class="travel-search">
                     <form class="travel-search-form">
+                        <p>Transfer</p>
                         <section>
                             <label for="autocomplete-input">Pick-up City Name</label>
                             <input type="text" id="autocomplete-input" class="autocomplete">
