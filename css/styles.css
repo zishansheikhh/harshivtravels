@@ -214,6 +214,7 @@ form.travel-search-form button {
 .autocomplete-items {
     position: absolute;
     border: 1px solid #d4d4d4;
+    border-radius: 8px;
     border-bottom: none;
     border-top: none;
     z-index: 999;
